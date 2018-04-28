@@ -7,8 +7,8 @@ You are encouraged to write more than one database query for each question.
         b. firstname, lastname of the corresponding employee
         c. firstname, lastname of the manager for that employee
     
-    2. Output the firstname and lastname of each pair of employees who work for the same project. There should
-       not be any duplicate reversed pair and no employee be paired with the same employee.
+    2. Output the firstname and lastname of each pair of employees who work for the same project. 
+       There should not be any duplicate reversed pair and no employee be paired with the same employee.
     
     3. For a given department number (input from a browser), output
         a. name of the department

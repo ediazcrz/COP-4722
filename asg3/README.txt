@@ -1,6 +1,5 @@
 The purpose of this assignment is to familiarize with PHP Queries.
-Write a PHP script for each of the following questions (q1.php, q2.php, ...) and test them on the company
-database (tables) in xampp module.
+Write a PHP script for each of the following questions (q1.php, q2.php, ...) and test them on the company database (tables) in xampp module.
 You are encouraged to write more than one database query for each question.
 
     1. For a given dependent name (input from a browser), output

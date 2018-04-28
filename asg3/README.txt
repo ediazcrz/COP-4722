@@ -20,6 +20,5 @@ You are encouraged to write more than one database query for each question.
         b. firstname, lastname of the manager
         c. total number of dependents of all employees who work for the department
 
-Please note that a department has only one manager (that is specified by the mgrssn attribute) but a department
-may have more than one supervisor. Note that each supervisor is also an employee as well as each manager is
-also an employee. The role of a supervisor is to oversee the work of his/her immed
+Please note that a department has only one manager (that is specified by the mgrssn attribute) but a department may have more than one supervisor. 
+Note that each supervisor is also an employee as well as each manager is also an employee. The role of a supervisor is to oversee the work of his/her immed

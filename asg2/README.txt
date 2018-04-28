@@ -1,7 +1,6 @@
 The purpose of this assignment is to familiarize with serializability. Show the intermediate steps for each answer.
 
-I. Consider the three transactions Ta , Tb , and Tc , and the schedules S1 , S2 , S3 and S4 given below. Which of the
-schedules is (conflict) serializable? The subscript for each database operation in a schedule denotes the transaction
+I. Consider the three transactions Ta , Tb , and Tc , and the schedules S1 , S2 , S3 and S4 given below. Which of the schedules is (conflict) serializable? The subscript for each database operation in a schedule denotes the transaction
 number for that operation. For each schedule, show all conflicts, draw the precedence graph, determine and write
 down if it is serializable or not, and the equivalent serial schedules if exist.
 

@@ -9,8 +9,9 @@ If the email is not in your inbox, please check the spam folder.
 The value on the first line of the data is the minimum support value.
 Perform data mining manually on this given set of data values and output
 
-    1) Frequent itemsets at ALL possible levels starting from L-1 that satisfy the specified minimum support
-       value
+    1) Frequent itemsets at ALL possible levels starting from L-1 that satisfy the specified 
+       minimum support value
+       
     2) For the frequent itemset L-2,
         - enumerate all possible association rules
         - compute the confidence value and interest value for each association rule

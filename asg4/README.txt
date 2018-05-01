@@ -1,6 +1,6 @@
 The purpose of this assignment is to familiarize with XQueries.
-Write an XQuery for each of the following queries (q1.xq, q2.xq, ...) and test them on the company xml
-documents (included in "basex\company" folder of the basex package).
+Write an XQuery for each of the following queries (q1.xq, q2.xq, ...) and test them on the company 
+xml documents (included in "basex\company" folder of the basex package).
 
     1. For each dependent, output
         a. dependent name
@@ -22,4 +22,5 @@ documents (included in "basex\company" folder of the basex package).
         d. total number of employee-work assignments (number of worker-project assignments
            from works_on) for the project
 
-(Please note that the BaseX folder was placed at the root of the C drive when writing these queries. Also queries are not optimized for this assignment)
+(Please note that the BaseX folder was placed at the root of the C drive when writing these queries)
+(Also queries are not optimized for this assignment)

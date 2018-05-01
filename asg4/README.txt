@@ -22,5 +22,5 @@ xml documents (included in "basex\company" folder of the basex package).
         d. total number of employee-work assignments (number of worker-project assignments
            from works_on) for the project
 
-(Please note that the BaseX folder was placed at the root of the C drive when writing these queries)
-(Also queries are not optimized for this assignment)
+(BaseX folder was placed at the root of the C drive when writing these queries)
+(Please note that queries are not optimized for this assignment)

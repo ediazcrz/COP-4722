@@ -1,0 +1,19 @@
+BaseX: XPath/Xquery 8.6.7,  Platform-independent, Java 7 is required
+
+Steps:
+ - Uncompress basex.zip to C:\basex
+ - execute C:\basex\download\BaseX867.exe
+ - run "Basex GUI" from desktop or StartMenu
+    Options -> Preferences... ->
+      Database Path: C:/basex/data
+      Repository Path: C:/basex/queries
+
+Links:
+  http://docs.basex.org/wiki/Main_Page
+  http://docs.basex.org/wiki/Startup
+  http://docs.basex.org/wiki/Commands
+  http://docs.basex.org/wiki/Command-Line_Options
+  https://en.wikipedia.org/wiki/BaseX
+  http://basex.org/products/download/all-downloads/ 
+
+      

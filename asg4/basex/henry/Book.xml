@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataroot>
+  <Book>
+    <BookCode>0180</BookCode>
+    <Title>A Deepness in the Sky                   </Title>
+    <PublisherCode>TB </PublisherCode>
+    <Type>SFI</Type>
+    <Price>7.19</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>0189</BookCode>
+    <Title>Magic Terror                            </Title>
+    <PublisherCode>FA </PublisherCode>
+    <Type>HOR</Type>
+    <Price>7.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>0200</BookCode>
+    <Title>The Stranger                            </Title>
+    <PublisherCode>VB </PublisherCode>
+    <Type>FIC</Type>
+    <Price>8.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>0378</BookCode>
+    <Title>Venice                                  </Title>
+    <PublisherCode>SS </PublisherCode>
+    <Type>ART</Type>
+    <Price>24.50</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>079X</BookCode>
+    <Title>Second Wind                             </Title>
+    <PublisherCode>PU </PublisherCode>
+    <Type>MYS</Type>
+    <Price>24.95</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>0808</BookCode>
+    <Title>The Edge                                </Title>
+    <PublisherCode>JP </PublisherCode>
+    <Type>MYS</Type>
+    <Price>6.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>1351</BookCode>
+    <Title>Dreamcatcher: A Novel                   </Title>
+    <PublisherCode>SC </PublisherCode>
+    <Type>HOR</Type>
+    <Price>19.60</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>1382</BookCode>
+    <Title>Treasure Chests                         </Title>
+    <PublisherCode>TA </PublisherCode>
+    <Type>ART</Type>
+    <Price>24.46</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>138X</BookCode>
+    <Title>Beloved                                 </Title>
+    <PublisherCode>PL </PublisherCode>
+    <Type>FIC</Type>
+    <Price>12.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>2226</BookCode>
+    <Title>Harry Potter and the Prisoner of Azkaban</Title>
+    <PublisherCode>ST </PublisherCode>
+    <Type>SFI</Type>
+    <Price>13.96</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>2281</BookCode>
+    <Title>Van Gogh and Gauguin                    </Title>
+    <PublisherCode>WP </PublisherCode>
+    <Type>ART</Type>
+    <Price>21.00</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>2766</BookCode>
+    <Title>Of Mice and Men                         </Title>
+    <PublisherCode>PE </PublisherCode>
+    <Type>FIC</Type>
+    <Price>6.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>2908</BookCode>
+    <Title>Electric Light                          </Title>
+    <PublisherCode>FS </PublisherCode>
+    <Type>POE</Type>
+    <Price>14.00</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>3350</BookCode>
+    <Title>Group: Six People in Search of a Life   </Title>
+    <PublisherCode>BP </PublisherCode>
+    <Type>PSY</Type>
+    <Price>10.40</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>3743</BookCode>
+    <Title>Nine Stories                            </Title>
+    <PublisherCode>LB </PublisherCode>
+    <Type>FIC</Type>
+    <Price>5.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>3906</BookCode>
+    <Title>The Soul of a New Machine               </Title>
+    <PublisherCode>BY </PublisherCode>
+    <Type>SCI</Type>
+    <Price>11.16</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>5163</BookCode>
+    <Title>Travels with Charley                    </Title>
+    <PublisherCode>PE </PublisherCode>
+    <Type>TRA</Type>
+    <Price>7.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>5790</BookCode>
+    <Title>Catch-22                                </Title>
+    <PublisherCode>SC </PublisherCode>
+    <Type>FIC</Type>
+    <Price>12.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>6128</BookCode>
+    <Title>Jazz                                    </Title>
+    <PublisherCode>PL </PublisherCode>
+    <Type>FIC</Type>
+    <Price>12.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>6328</BookCode>
+    <Title>Band of Brothers                        </Title>
+    <PublisherCode>TO </PublisherCode>
+    <Type>HIS</Type>
+    <Price>9.60</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>669X</BookCode>
+    <Title>A Guide to SQL                          </Title>
+    <PublisherCode>CT </PublisherCode>
+    <Type>CMP</Type>
+    <Price>37.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>6908</BookCode>
+    <Title>Franny and Zooey                        </Title>
+    <PublisherCode>LB </PublisherCode>
+    <Type>FIC</Type>
+    <Price>5.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>7405</BookCode>
+    <Title>East of Eden                            </Title>
+    <PublisherCode>PE </PublisherCode>
+    <Type>FIC</Type>
+    <Price>12.95</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>7443</BookCode>
+    <Title>Harry Potter and the Goblet of Fire     </Title>
+    <PublisherCode>ST </PublisherCode>
+    <Type>SFI</Type>
+    <Price>18.16</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>7559</BookCode>
+    <Title>The Fall                                </Title>
+    <PublisherCode>VB </PublisherCode>
+    <Type>FIC</Type>
+    <Price>8.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>8092</BookCode>
+    <Title>Godel, Escher, Bach                     </Title>
+    <PublisherCode>BA </PublisherCode>
+    <Type>PHI</Type>
+    <Price>14.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>8720</BookCode>
+    <Title>When Rabbit Howls                       </Title>
+    <PublisherCode>JP </PublisherCode>
+    <Type>PSY</Type>
+    <Price>6.29</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9611</BookCode>
+    <Title>Black House                             </Title>
+    <PublisherCode>RH </PublisherCode>
+    <Type>HOR</Type>
+    <Price>18.81</Price>
+    <Paperback>N</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9627</BookCode>
+    <Title>Song of Solomon                         </Title>
+    <PublisherCode>PL </PublisherCode>
+    <Type>FIC</Type>
+    <Price>14.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9701</BookCode>
+    <Title>The Grapes of Wrath                     </Title>
+    <PublisherCode>PE </PublisherCode>
+    <Type>FIC</Type>
+    <Price>13.00</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9882</BookCode>
+    <Title>Slay Ride                               </Title>
+    <PublisherCode>JP </PublisherCode>
+    <Type>MYS</Type>
+    <Price>6.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9883</BookCode>
+    <Title>The Catcher in the Rye                  </Title>
+    <PublisherCode>LB </PublisherCode>
+    <Type>FIC</Type>
+    <Price>5.99</Price>
+    <Paperback>Y</Paperback>
+  </Book>
+  <Book>
+    <BookCode>9931</BookCode>
+    <Title>To Kill a Mockingbird                   </Title>
+    <PublisherCode>HC </PublisherCode>
+    <Type>FIC</Type>
+    <Price>18.00</Price>
+    <Paperback>N</Paperback>
+  </Book>
+</dataroot>

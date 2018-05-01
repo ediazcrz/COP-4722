@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataroot>
+  <Branch>
+    <BranchNum>1</BranchNum>
+    <BranchName>Henry Downtown                                    </BranchName>
+    <BranchLocation>16 Riverview                                      </BranchLocation>
+    <NumEmployees>10</NumEmployees>
+  </Branch>
+  <Branch>
+    <BranchNum>2</BranchNum>
+    <BranchName>Henry On The Hill                                 </BranchName>
+    <BranchLocation>1289 Bedford                                      </BranchLocation>
+    <NumEmployees>6</NumEmployees>
+  </Branch>
+  <Branch>
+    <BranchNum>3</BranchNum>
+    <BranchName>Henry Brentwood                                   </BranchName>
+    <BranchLocation>Brentwood Mall                                    </BranchLocation>
+    <NumEmployees>15</NumEmployees>
+  </Branch>
+  <Branch>
+    <BranchNum>4</BranchNum>
+    <BranchName>Henry Eastshore                                   </BranchName>
+    <BranchLocation>Eastshore Mall                                    </BranchLocation>
+    <NumEmployees>9</NumEmployees>
+  </Branch>
+</dataroot>

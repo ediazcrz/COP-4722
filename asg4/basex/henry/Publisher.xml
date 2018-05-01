@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataroot>
+  <Publisher>
+    <PublisherCode>AH </PublisherCode>
+    <PublisherName>Arkham House             </PublisherName>
+    <City>Sauk City WI        </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>AP </PublisherCode>
+    <PublisherName>Arcade Publishing        </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>BA </PublisherCode>
+    <PublisherName>Basic Books              </PublisherName>
+    <City>Boulder CO          </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>BP </PublisherCode>
+    <PublisherName>Berkley Publishing       </PublisherName>
+    <City>Boston              </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>BY </PublisherCode>
+    <PublisherName>Back Bay Books           </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>CT </PublisherCode>
+    <PublisherName>Course Technology        </PublisherName>
+    <City>Cambridge MA        </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>FA </PublisherCode>
+    <PublisherName>Fawcett Books            </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>FS </PublisherCode>
+    <PublisherName>Farrar Straus and Giroux </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>HC </PublisherCode>
+    <PublisherName>HarperCollins Publishers </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>JP </PublisherCode>
+    <PublisherName>Jove Publications        </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>JT </PublisherCode>
+    <PublisherName>Jeremy P. Tarcher        </PublisherName>
+    <City>Los Angeles         </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>LB </PublisherCode>
+    <PublisherName>Lb Books                 </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>MP </PublisherCode>
+    <PublisherName>McPherson and Co.        </PublisherName>
+    <City>Kingston            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>PE </PublisherCode>
+    <PublisherName>Penguin USA              </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>PL </PublisherCode>
+    <PublisherName>Plume                    </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>PU </PublisherCode>
+    <PublisherName>Putnam Publishing Group  </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>RH </PublisherCode>
+    <PublisherName>Random House             </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>SB </PublisherCode>
+    <PublisherName>Schoken Books            </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>SC </PublisherCode>
+    <PublisherName>Scribner                 </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>SS </PublisherCode>
+    <PublisherName>Simon and Schuster       </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>ST </PublisherCode>
+    <PublisherName>Scholastic Trade         </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>TA </PublisherCode>
+    <PublisherName>Taunton Press            </PublisherName>
+    <City>Newtown CT          </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>TB </PublisherCode>
+    <PublisherName>Tor Books                </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>TH </PublisherCode>
+    <PublisherName>Thames and Hudson        </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>TO </PublisherCode>
+    <PublisherName>Touchstone Books         </PublisherName>
+    <City>Westport CT         </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>VB </PublisherCode>
+    <PublisherName>Vintage Books            </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>WN </PublisherCode>
+    <PublisherName>W.W. Norton              </PublisherName>
+    <City>New York            </City>
+  </Publisher>
+  <Publisher>
+    <PublisherCode>WP </PublisherCode>
+    <PublisherName>Westview Press           </PublisherName>
+    <City>Boulder CO          </City>
+  </Publisher>
+</dataroot>

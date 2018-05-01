@@ -1,0 +1,1060 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.5.0.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 15, 2015 at 10:44 PM
+- Server version: 10.0.17-MariaDB
+- PHP Version: 5.6.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="henry" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="author">
+                CREATE TABLE `author` (
+                  `AuthorNum` decimal(2,0) NOT NULL,
+                  `AuthorLast` char(12) DEFAULT NULL,
+                  `AuthorFirst` char(10) DEFAULT NULL,
+                  PRIMARY KEY (`AuthorNum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="book">
+                CREATE TABLE `book` (
+                  `BookCode` char(4) NOT NULL,
+                  `Title` char(40) DEFAULT NULL,
+                  `PublisherCode` char(3) DEFAULT NULL,
+                  `Type` char(3) DEFAULT NULL,
+                  `Price` decimal(8,2) DEFAULT NULL,
+                  `Paperback` char(1) DEFAULT NULL,
+                  PRIMARY KEY (`BookCode`),
+                  KEY `BookPubl_fk` (`PublisherCode`),
+                  CONSTRAINT `BookPubl_fk` FOREIGN KEY (`PublisherCode`) REFERENCES `publisher` (`PublisherCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="branch">
+                CREATE TABLE `branch` (
+                  `BranchNum` decimal(2,0) NOT NULL,
+                  `BranchName` char(50) DEFAULT NULL,
+                  `BranchLocation` char(50) DEFAULT NULL,
+                  `NumEmployees` decimal(2,0) DEFAULT NULL,
+                  PRIMARY KEY (`BranchNum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="inventory">
+                CREATE TABLE `inventory` (
+                  `BookCode` char(4) NOT NULL,
+                  `BranchNum` decimal(2,0) NOT NULL,
+                  `OnHand` decimal(2,0) DEFAULT NULL,
+                  PRIMARY KEY (`BookCode`,`BranchNum`),
+                  KEY `InventBranch_fk` (`BranchNum`),
+                  CONSTRAINT `InventBranch_fk` FOREIGN KEY (`BranchNum`) REFERENCES `branch` (`BranchNum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="publisher">
+                CREATE TABLE `publisher` (
+                  `PublisherCode` char(3) NOT NULL,
+                  `PublisherName` char(25) DEFAULT NULL,
+                  `City` char(20) DEFAULT NULL,
+                  PRIMARY KEY (`PublisherCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="wrote">
+                CREATE TABLE `wrote` (
+                  `BookCode` char(4) NOT NULL,
+                  `AuthorNum` decimal(2,0) NOT NULL,
+                  `Sequence` decimal(2,0) DEFAULT NULL,
+                  PRIMARY KEY (`BookCode`,`AuthorNum`),
+                  KEY `WroteAuth_fk` (`AuthorNum`),
+                  CONSTRAINT `WroteAuth_fk` FOREIGN KEY (`AuthorNum`) REFERENCES `author` (`AuthorNum`),
+                  CONSTRAINT `WroteBook_fk` FOREIGN KEY (`BookCode`) REFERENCES `book` (`BookCode`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'henry'
+    -->
+    <database name="henry">
+        <!-- Table author -->
+        <table name="author">
+            <column name="AuthorNum">1</column>
+            <column name="AuthorLast">Morrison</column>
+            <column name="AuthorFirst">Toni</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">2</column>
+            <column name="AuthorLast">Solotaroff</column>
+            <column name="AuthorFirst">Paul</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">3</column>
+            <column name="AuthorLast">Vintage</column>
+            <column name="AuthorFirst">Vernor</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">4</column>
+            <column name="AuthorLast">Francis</column>
+            <column name="AuthorFirst">Dick</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">5</column>
+            <column name="AuthorLast">Straub</column>
+            <column name="AuthorFirst">Peter</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">6</column>
+            <column name="AuthorLast">King</column>
+            <column name="AuthorFirst">Stephen</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">7</column>
+            <column name="AuthorLast">Pratt</column>
+            <column name="AuthorFirst">Philip</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">8</column>
+            <column name="AuthorLast">Chase</column>
+            <column name="AuthorFirst">Truddi</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">9</column>
+            <column name="AuthorLast">Collins</column>
+            <column name="AuthorFirst">Bradley</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">10</column>
+            <column name="AuthorLast">Heller</column>
+            <column name="AuthorFirst">Joseph</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">11</column>
+            <column name="AuthorLast">Wills</column>
+            <column name="AuthorFirst">Gary</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">12</column>
+            <column name="AuthorLast">Hofstadter</column>
+            <column name="AuthorFirst">Douglas R.</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">13</column>
+            <column name="AuthorLast">Lee</column>
+            <column name="AuthorFirst">Harper</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">14</column>
+            <column name="AuthorLast">Ambrose</column>
+            <column name="AuthorFirst">Stephen E.</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">15</column>
+            <column name="AuthorLast">Rowling</column>
+            <column name="AuthorFirst">J.K.</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">16</column>
+            <column name="AuthorLast">Salinger</column>
+            <column name="AuthorFirst">J.D.</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">17</column>
+            <column name="AuthorLast">Heaney</column>
+            <column name="AuthorFirst">Seamus</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">18</column>
+            <column name="AuthorLast">Camus</column>
+            <column name="AuthorFirst">Albert</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">19</column>
+            <column name="AuthorLast">Collins, Jr.</column>
+            <column name="AuthorFirst">Bradley</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">20</column>
+            <column name="AuthorLast">Steinbeck</column>
+            <column name="AuthorFirst">John</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">21</column>
+            <column name="AuthorLast">Castelman</column>
+            <column name="AuthorFirst">Riva</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">22</column>
+            <column name="AuthorLast">Owen</column>
+            <column name="AuthorFirst">Barbara</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">23</column>
+            <column name="AuthorLast">O'Rourke</column>
+            <column name="AuthorFirst">Randy</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">24</column>
+            <column name="AuthorLast">Kidder</column>
+            <column name="AuthorFirst">Tracy</column>
+        </table>
+        <table name="author">
+            <column name="AuthorNum">25</column>
+            <column name="AuthorLast">Schleining</column>
+            <column name="AuthorFirst">Lon</column>
+        </table>
+        <!-- Table book -->
+        <table name="book">
+            <column name="BookCode">0180</column>
+            <column name="Title">A Deepness in the Sky</column>
+            <column name="PublisherCode">TB</column>
+            <column name="Type">SFI</column>
+            <column name="Price">7.19</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">0189</column>
+            <column name="Title">Magic Terror</column>
+            <column name="PublisherCode">FA</column>
+            <column name="Type">HOR</column>
+            <column name="Price">7.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">0200</column>
+            <column name="Title">The Stranger</column>
+            <column name="PublisherCode">VB</column>
+            <column name="Type">FIC</column>
+            <column name="Price">8.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">0378</column>
+            <column name="Title">Venice</column>
+            <column name="PublisherCode">SS</column>
+            <column name="Type">ART</column>
+            <column name="Price">24.50</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">079X</column>
+            <column name="Title">Second Wind</column>
+            <column name="PublisherCode">PU</column>
+            <column name="Type">MYS</column>
+            <column name="Price">24.95</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">0808</column>
+            <column name="Title">The Edge</column>
+            <column name="PublisherCode">JP</column>
+            <column name="Type">MYS</column>
+            <column name="Price">6.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">1351</column>
+            <column name="Title">Dreamcatcher: A Novel</column>
+            <column name="PublisherCode">SC</column>
+            <column name="Type">HOR</column>
+            <column name="Price">19.60</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">1382</column>
+            <column name="Title">Treasure Chests</column>
+            <column name="PublisherCode">TA</column>
+            <column name="Type">ART</column>
+            <column name="Price">24.46</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">138X</column>
+            <column name="Title">Beloved</column>
+            <column name="PublisherCode">PL</column>
+            <column name="Type">FIC</column>
+            <column name="Price">12.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">2226</column>
+            <column name="Title">Harry Potter and the Prisoner of Azkaban</column>
+            <column name="PublisherCode">ST</column>
+            <column name="Type">SFI</column>
+            <column name="Price">13.96</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">2281</column>
+            <column name="Title">Van Gogh and Gauguin</column>
+            <column name="PublisherCode">WP</column>
+            <column name="Type">ART</column>
+            <column name="Price">21.00</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">2766</column>
+            <column name="Title">Of Mice and Men</column>
+            <column name="PublisherCode">PE</column>
+            <column name="Type">FIC</column>
+            <column name="Price">6.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">2908</column>
+            <column name="Title">Electric Light</column>
+            <column name="PublisherCode">FS</column>
+            <column name="Type">POE</column>
+            <column name="Price">14.00</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">3350</column>
+            <column name="Title">Group: Six People in Search of a Life</column>
+            <column name="PublisherCode">BP</column>
+            <column name="Type">PSY</column>
+            <column name="Price">10.40</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">3743</column>
+            <column name="Title">Nine Stories</column>
+            <column name="PublisherCode">LB</column>
+            <column name="Type">FIC</column>
+            <column name="Price">5.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">3906</column>
+            <column name="Title">The Soul of a New Machine</column>
+            <column name="PublisherCode">BY</column>
+            <column name="Type">SCI</column>
+            <column name="Price">11.16</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">5163</column>
+            <column name="Title">Travels with Charley</column>
+            <column name="PublisherCode">PE</column>
+            <column name="Type">TRA</column>
+            <column name="Price">7.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">5790</column>
+            <column name="Title">Catch-22</column>
+            <column name="PublisherCode">SC</column>
+            <column name="Type">FIC</column>
+            <column name="Price">12.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">6128</column>
+            <column name="Title">Jazz</column>
+            <column name="PublisherCode">PL</column>
+            <column name="Type">FIC</column>
+            <column name="Price">12.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">6328</column>
+            <column name="Title">Band of Brothers</column>
+            <column name="PublisherCode">TO</column>
+            <column name="Type">HIS</column>
+            <column name="Price">9.60</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">669X</column>
+            <column name="Title">A Guide to SQL</column>
+            <column name="PublisherCode">CT</column>
+            <column name="Type">CMP</column>
+            <column name="Price">37.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">6908</column>
+            <column name="Title">Franny and Zooey</column>
+            <column name="PublisherCode">LB</column>
+            <column name="Type">FIC</column>
+            <column name="Price">5.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">7405</column>
+            <column name="Title">East of Eden</column>
+            <column name="PublisherCode">PE</column>
+            <column name="Type">FIC</column>
+            <column name="Price">12.95</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">7443</column>
+            <column name="Title">Harry Potter and the Goblet of Fire</column>
+            <column name="PublisherCode">ST</column>
+            <column name="Type">SFI</column>
+            <column name="Price">18.16</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">7559</column>
+            <column name="Title">The Fall</column>
+            <column name="PublisherCode">VB</column>
+            <column name="Type">FIC</column>
+            <column name="Price">8.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">8092</column>
+            <column name="Title">Godel, Escher, Bach</column>
+            <column name="PublisherCode">BA</column>
+            <column name="Type">PHI</column>
+            <column name="Price">14.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">8720</column>
+            <column name="Title">When Rabbit Howls</column>
+            <column name="PublisherCode">JP</column>
+            <column name="Type">PSY</column>
+            <column name="Price">6.29</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9611</column>
+            <column name="Title">Black House</column>
+            <column name="PublisherCode">RH</column>
+            <column name="Type">HOR</column>
+            <column name="Price">18.81</column>
+            <column name="Paperback">N</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9627</column>
+            <column name="Title">Song of Solomon</column>
+            <column name="PublisherCode">PL</column>
+            <column name="Type">FIC</column>
+            <column name="Price">14.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9701</column>
+            <column name="Title">The Grapes of Wrath</column>
+            <column name="PublisherCode">PE</column>
+            <column name="Type">FIC</column>
+            <column name="Price">13.00</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9882</column>
+            <column name="Title">Slay Ride</column>
+            <column name="PublisherCode">JP</column>
+            <column name="Type">MYS</column>
+            <column name="Price">6.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9883</column>
+            <column name="Title">The Catcher in the Rye</column>
+            <column name="PublisherCode">LB</column>
+            <column name="Type">FIC</column>
+            <column name="Price">5.99</column>
+            <column name="Paperback">Y</column>
+        </table>
+        <table name="book">
+            <column name="BookCode">9931</column>
+            <column name="Title">To Kill a Mockingbird</column>
+            <column name="PublisherCode">HC</column>
+            <column name="Type">FIC</column>
+            <column name="Price">18.00</column>
+            <column name="Paperback">N</column>
+        </table>
+        <!-- Table branch -->
+        <table name="branch">
+            <column name="BranchNum">1</column>
+            <column name="BranchName">Henry Downtown</column>
+            <column name="BranchLocation">16 Riverview</column>
+            <column name="NumEmployees">10</column>
+        </table>
+        <table name="branch">
+            <column name="BranchNum">2</column>
+            <column name="BranchName">Henry On The Hill</column>
+            <column name="BranchLocation">1289 Bedford</column>
+            <column name="NumEmployees">6</column>
+        </table>
+        <table name="branch">
+            <column name="BranchNum">3</column>
+            <column name="BranchName">Henry Brentwood</column>
+            <column name="BranchLocation">Brentwood Mall</column>
+            <column name="NumEmployees">15</column>
+        </table>
+        <table name="branch">
+            <column name="BranchNum">4</column>
+            <column name="BranchName">Henry Eastshore</column>
+            <column name="BranchLocation">Eastshore Mall</column>
+            <column name="NumEmployees">9</column>
+        </table>
+        <!-- Table inventory -->
+        <table name="inventory">
+            <column name="BookCode">0180</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">0189</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">0200</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">0200</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">0378</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">079X</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">079X</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">079X</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">0808</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">1351</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">4</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">1351</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">1382</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">138X</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2226</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2226</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2226</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2281</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2766</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2908</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">2908</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">3350</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">3743</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">3906</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">3906</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">5163</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">5790</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">6128</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">4</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">6128</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">6328</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">669X</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">6908</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">7405</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">7443</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">7559</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">8092</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">8720</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9611</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9627</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">5</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9627</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9701</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9701</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">1</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9701</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9701</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9882</column>
+            <column name="BranchNum">3</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9883</column>
+            <column name="BranchNum">2</column>
+            <column name="OnHand">3</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9883</column>
+            <column name="BranchNum">4</column>
+            <column name="OnHand">2</column>
+        </table>
+        <table name="inventory">
+            <column name="BookCode">9931</column>
+            <column name="BranchNum">1</column>
+            <column name="OnHand">2</column>
+        </table>
+        <!-- Table publisher -->
+        <table name="publisher">
+            <column name="PublisherCode">AH</column>
+            <column name="PublisherName">Arkham House</column>
+            <column name="City">Sauk City WI</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">AP</column>
+            <column name="PublisherName">Arcade Publishing</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">BA</column>
+            <column name="PublisherName">Basic Books</column>
+            <column name="City">Boulder CO</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">BP</column>
+            <column name="PublisherName">Berkley Publishing</column>
+            <column name="City">Boston</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">BY</column>
+            <column name="PublisherName">Back Bay Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">CT</column>
+            <column name="PublisherName">Course Technology</column>
+            <column name="City">Cambridge MA</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">FA</column>
+            <column name="PublisherName">Fawcett Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">FS</column>
+            <column name="PublisherName">Farrar Straus and Giroux</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">HC</column>
+            <column name="PublisherName">HarperCollins Publishers</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">JP</column>
+            <column name="PublisherName">Jove Publications</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">JT</column>
+            <column name="PublisherName">Jeremy P. Tarcher</column>
+            <column name="City">Los Angeles</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">LB</column>
+            <column name="PublisherName">Lb Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">MP</column>
+            <column name="PublisherName">McPherson and Co.</column>
+            <column name="City">Kingston</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">PE</column>
+            <column name="PublisherName">Penguin USA</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">PL</column>
+            <column name="PublisherName">Plume</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">PU</column>
+            <column name="PublisherName">Putnam Publishing Group</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">RH</column>
+            <column name="PublisherName">Random House</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">SB</column>
+            <column name="PublisherName">Schoken Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">SC</column>
+            <column name="PublisherName">Scribner</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">SS</column>
+            <column name="PublisherName">Simon and Schuster</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">ST</column>
+            <column name="PublisherName">Scholastic Trade</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">TA</column>
+            <column name="PublisherName">Taunton Press</column>
+            <column name="City">Newtown CT</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">TB</column>
+            <column name="PublisherName">Tor Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">TH</column>
+            <column name="PublisherName">Thames and Hudson</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">TO</column>
+            <column name="PublisherName">Touchstone Books</column>
+            <column name="City">Westport CT</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">VB</column>
+            <column name="PublisherName">Vintage Books</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">WN</column>
+            <column name="PublisherName">W.W. Norton</column>
+            <column name="City">New York</column>
+        </table>
+        <table name="publisher">
+            <column name="PublisherCode">WP</column>
+            <column name="PublisherName">Westview Press</column>
+            <column name="City">Boulder CO</column>
+        </table>
+        <!-- Table wrote -->
+        <table name="wrote">
+            <column name="BookCode">0180</column>
+            <column name="AuthorNum">3</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">0189</column>
+            <column name="AuthorNum">5</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">0200</column>
+            <column name="AuthorNum">18</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">0378</column>
+            <column name="AuthorNum">11</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">079X</column>
+            <column name="AuthorNum">4</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">0808</column>
+            <column name="AuthorNum">4</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">1351</column>
+            <column name="AuthorNum">6</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">1382</column>
+            <column name="AuthorNum">23</column>
+            <column name="Sequence">2</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">1382</column>
+            <column name="AuthorNum">25</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">138X</column>
+            <column name="AuthorNum">1</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">2226</column>
+            <column name="AuthorNum">15</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">2281</column>
+            <column name="AuthorNum">9</column>
+            <column name="Sequence">2</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">2281</column>
+            <column name="AuthorNum">19</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">2766</column>
+            <column name="AuthorNum">20</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">2908</column>
+            <column name="AuthorNum">17</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">3350</column>
+            <column name="AuthorNum">2</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">3743</column>
+            <column name="AuthorNum">16</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">3906</column>
+            <column name="AuthorNum">24</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">5163</column>
+            <column name="AuthorNum">20</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">5790</column>
+            <column name="AuthorNum">10</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">6128</column>
+            <column name="AuthorNum">1</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">6328</column>
+            <column name="AuthorNum">14</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">669X</column>
+            <column name="AuthorNum">7</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">6908</column>
+            <column name="AuthorNum">16</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">7405</column>
+            <column name="AuthorNum">20</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">7443</column>
+            <column name="AuthorNum">15</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">7559</column>
+            <column name="AuthorNum">18</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">8092</column>
+            <column name="AuthorNum">12</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">8720</column>
+            <column name="AuthorNum">8</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9611</column>
+            <column name="AuthorNum">5</column>
+            <column name="Sequence">2</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9611</column>
+            <column name="AuthorNum">6</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9627</column>
+            <column name="AuthorNum">1</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9701</column>
+            <column name="AuthorNum">20</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9882</column>
+            <column name="AuthorNum">4</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9883</column>
+            <column name="AuthorNum">16</column>
+            <column name="Sequence">1</column>
+        </table>
+        <table name="wrote">
+            <column name="BookCode">9931</column>
+            <column name="AuthorNum">13</column>
+            <column name="Sequence">1</column>
+        </table>
+    </database>
+</pma_xml_export>

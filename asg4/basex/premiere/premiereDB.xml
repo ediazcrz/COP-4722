@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.5.0.2
+- https://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Nov 15, 2015 at 01:45 AM
+- Server version: 10.0.17-MariaDB
+- PHP Version: 5.6.14
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="premiere" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="customer">
+                CREATE TABLE `customer` (
+                  `customernum` char(3) NOT NULL,
+                  `customername` char(35) NOT NULL,
+                  `street` char(15) DEFAULT NULL,
+                  `city` char(15) DEFAULT NULL,
+                  `state` char(2) DEFAULT NULL,
+                  `zip` char(5) DEFAULT NULL,
+                  `balance` decimal(8,2) DEFAULT NULL,
+                  `creditlimit` decimal(8,2) DEFAULT NULL,
+                  `repnum` char(2) DEFAULT NULL,
+                  PRIMARY KEY (`customernum`),
+                  KEY `custRep_fk` (`repnum`),
+                  CONSTRAINT `custRep_fk` FOREIGN KEY (`repnum`) REFERENCES `rep` (`repnum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="orderline">
+                CREATE TABLE `orderline` (
+                  `ordernum` char(5) NOT NULL,
+                  `partnum` char(4) NOT NULL,
+                  `numordered` decimal(3,0) DEFAULT NULL,
+                  `quotedprice` decimal(6,2) DEFAULT NULL,
+                  PRIMARY KEY (`ordernum`,`partnum`),
+                  KEY `olinepart_fk` (`partnum`),
+                  CONSTRAINT `olineorders_fk` FOREIGN KEY (`ordernum`) REFERENCES `orders` (`ordernum`),
+                  CONSTRAINT `olinepart_fk` FOREIGN KEY (`partnum`) REFERENCES `part` (`partnum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="orders">
+                CREATE TABLE `orders` (
+                  `ordernum` char(5) NOT NULL,
+                  `orderdate` char(11) DEFAULT NULL,
+                  `customernum` char(3) DEFAULT NULL,
+                  PRIMARY KEY (`ordernum`),
+                  KEY `orderscust_fk` (`customernum`),
+                  CONSTRAINT `orderscust_fk` FOREIGN KEY (`customernum`) REFERENCES `customer` (`customernum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="part">
+                CREATE TABLE `part` (
+                  `partnum` char(4) NOT NULL,
+                  `description` char(15) DEFAULT NULL,
+                  `onhand` decimal(4,0) DEFAULT NULL,
+                  `class` char(2) DEFAULT NULL,
+                  `warehouse` char(1) DEFAULT NULL,
+                  `price` decimal(6,2) DEFAULT NULL,
+                  PRIMARY KEY (`partnum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="rep">
+                CREATE TABLE `rep` (
+                  `repnum` char(2) NOT NULL,
+                  `lastname` char(15) DEFAULT NULL,
+                  `firstname` char(15) DEFAULT NULL,
+                  `street` char(15) DEFAULT NULL,
+                  `city` char(15) DEFAULT NULL,
+                  `state` char(2) DEFAULT NULL,
+                  `zip` char(5) DEFAULT NULL,
+                  `commission` decimal(7,2) DEFAULT NULL,
+                  `rate` decimal(3,2) DEFAULT NULL,
+                  PRIMARY KEY (`repnum`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: 'premiere'
+    -->
+    <database name="premiere">
+        <!-- Table customer -->
+        <table name="customer">
+            <column name="customernum">148</column>
+            <column name="customername">Al's Appliance and Sport</column>
+            <column name="street">2837 Greenway</column>
+            <column name="city">Fillmore</column>
+            <column name="state">FL</column>
+            <column name="zip">33336</column>
+            <column name="balance">6550.00</column>
+            <column name="creditlimit">7500.00</column>
+            <column name="repnum">20</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">282</column>
+            <column name="customername">Brookings Direct</column>
+            <column name="street">3827 Devon</column>
+            <column name="city">Grove</column>
+            <column name="state">FL</column>
+            <column name="zip">33321</column>
+            <column name="balance">431.50</column>
+            <column name="creditlimit">10000.00</column>
+            <column name="repnum">35</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">356</column>
+            <column name="customername">Ferguson's</column>
+            <column name="street">382 Wildwood</column>
+            <column name="city">Northfield</column>
+            <column name="state">FL</column>
+            <column name="zip">33146</column>
+            <column name="balance">5785.00</column>
+            <column name="creditlimit">7500.00</column>
+            <column name="repnum">65</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">408</column>
+            <column name="customername">The Everything Shop</column>
+            <column name="street">1828 Raven</column>
+            <column name="city">Crystal</column>
+            <column name="state">FL</column>
+            <column name="zip">33503</column>
+            <column name="balance">5285.25</column>
+            <column name="creditlimit">5000.00</column>
+            <column name="repnum">35</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">462</column>
+            <column name="customername">Bargains Galore</column>
+            <column name="street">3829 Central</column>
+            <column name="city">Grove</column>
+            <column name="state">FL</column>
+            <column name="zip">33321</column>
+            <column name="balance">3412.00</column>
+            <column name="creditlimit">10000.00</column>
+            <column name="repnum">65</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">524</column>
+            <column name="customername">Kline's</column>
+            <column name="street">838 Ridgeland</column>
+            <column name="city">Fillmore</column>
+            <column name="state">FL</column>
+            <column name="zip">33336</column>
+            <column name="balance">12762.00</column>
+            <column name="creditlimit">15000.00</column>
+            <column name="repnum">20</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">608</column>
+            <column name="customername">Johnson's Department Store</column>
+            <column name="street">372 Oxford</column>
+            <column name="city">Sheldon</column>
+            <column name="state">FL</column>
+            <column name="zip">33553</column>
+            <column name="balance">2106.00</column>
+            <column name="creditlimit">10000.00</column>
+            <column name="repnum">65</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">687</column>
+            <column name="customername">Lee's Sport and Appliance</column>
+            <column name="street">282 Evergreen</column>
+            <column name="city">Altonville</column>
+            <column name="state">FL</column>
+            <column name="zip">32543</column>
+            <column name="balance">2851.00</column>
+            <column name="creditlimit">5000.00</column>
+            <column name="repnum">35</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">725</column>
+            <column name="customername">Deerfield's Four Seasons</column>
+            <column name="street">282 Columbia</column>
+            <column name="city">Sheldon</column>
+            <column name="state">FL</column>
+            <column name="zip">33553</column>
+            <column name="balance">248.00</column>
+            <column name="creditlimit">7500.00</column>
+            <column name="repnum">35</column>
+        </table>
+        <table name="customer">
+            <column name="customernum">842</column>
+            <column name="customername">All Season</column>
+            <column name="street">28 Lakeview</column>
+            <column name="city">Grove</column>
+            <column name="state">FL</column>
+            <column name="zip">33321</column>
+            <column name="balance">8221.00</column>
+            <column name="creditlimit">7500.00</column>
+            <column name="repnum">20</column>
+        </table>
+        <!-- Table orderline -->
+        <table name="orderline">
+            <column name="ordernum">21608</column>
+            <column name="partnum">AT94</column>
+            <column name="numordered">11</column>
+            <column name="quotedprice">21.95</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21610</column>
+            <column name="partnum">DR93</column>
+            <column name="numordered">1</column>
+            <column name="quotedprice">495.00</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21610</column>
+            <column name="partnum">DW11</column>
+            <column name="numordered">1</column>
+            <column name="quotedprice">399.99</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21613</column>
+            <column name="partnum">KL62</column>
+            <column name="numordered">4</column>
+            <column name="quotedprice">329.95</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21614</column>
+            <column name="partnum">KT03</column>
+            <column name="numordered">2</column>
+            <column name="quotedprice">595.00</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21617</column>
+            <column name="partnum">BV06</column>
+            <column name="numordered">2</column>
+            <column name="quotedprice">794.95</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21617</column>
+            <column name="partnum">CD52</column>
+            <column name="numordered">4</column>
+            <column name="quotedprice">150.00</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21619</column>
+            <column name="partnum">DR93</column>
+            <column name="numordered">1</column>
+            <column name="quotedprice">495.00</column>
+        </table>
+        <table name="orderline">
+            <column name="ordernum">21623</column>
+            <column name="partnum">KV29</column>
+            <column name="numordered">2</column>
+            <column name="quotedprice">1290.00</column>
+        </table>
+        <!-- Table orders -->
+        <table name="orders">
+            <column name="ordernum">21608</column>
+            <column name="orderdate">20-OCT-2007</column>
+            <column name="customernum">148</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21610</column>
+            <column name="orderdate">20-OCT-2007</column>
+            <column name="customernum">356</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21613</column>
+            <column name="orderdate">21-OCT-2007</column>
+            <column name="customernum">408</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21614</column>
+            <column name="orderdate">21-OCT-2007</column>
+            <column name="customernum">282</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21617</column>
+            <column name="orderdate">23-OCT-2007</column>
+            <column name="customernum">608</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21619</column>
+            <column name="orderdate">23-OCT-2007</column>
+            <column name="customernum">148</column>
+        </table>
+        <table name="orders">
+            <column name="ordernum">21623</column>
+            <column name="orderdate">23-OCT-2007</column>
+            <column name="customernum">608</column>
+        </table>
+        <!-- Table part -->
+        <table name="part">
+            <column name="partnum">AT94</column>
+            <column name="description">Iron</column>
+            <column name="onhand">50</column>
+            <column name="class">HW</column>
+            <column name="warehouse">3</column>
+            <column name="price">24.95</column>
+        </table>
+        <table name="part">
+            <column name="partnum">BV06</column>
+            <column name="description">Home Gym</column>
+            <column name="onhand">45</column>
+            <column name="class">SG</column>
+            <column name="warehouse">2</column>
+            <column name="price">794.95</column>
+        </table>
+        <table name="part">
+            <column name="partnum">CD52</column>
+            <column name="description">Microwave Oven</column>
+            <column name="onhand">32</column>
+            <column name="class">AP</column>
+            <column name="warehouse">1</column>
+            <column name="price">165.00</column>
+        </table>
+        <table name="part">
+            <column name="partnum">DL71</column>
+            <column name="description">Cordless Drill</column>
+            <column name="onhand">21</column>
+            <column name="class">HW</column>
+            <column name="warehouse">3</column>
+            <column name="price">129.95</column>
+        </table>
+        <table name="part">
+            <column name="partnum">DR93</column>
+            <column name="description">Gas Range</column>
+            <column name="onhand">8</column>
+            <column name="class">AP</column>
+            <column name="warehouse">2</column>
+            <column name="price">495.00</column>
+        </table>
+        <table name="part">
+            <column name="partnum">DW11</column>
+            <column name="description">Washer</column>
+            <column name="onhand">12</column>
+            <column name="class">AP</column>
+            <column name="warehouse">3</column>
+            <column name="price">399.99</column>
+        </table>
+        <table name="part">
+            <column name="partnum">FD21</column>
+            <column name="description">Stand Mixer</column>
+            <column name="onhand">22</column>
+            <column name="class">HW</column>
+            <column name="warehouse">3</column>
+            <column name="price">159.95</column>
+        </table>
+        <table name="part">
+            <column name="partnum">KL62</column>
+            <column name="description">Dryer</column>
+            <column name="onhand">12</column>
+            <column name="class">AP</column>
+            <column name="warehouse">1</column>
+            <column name="price">349.95</column>
+        </table>
+        <table name="part">
+            <column name="partnum">KT03</column>
+            <column name="description">Dishwasher</column>
+            <column name="onhand">8</column>
+            <column name="class">AP</column>
+            <column name="warehouse">3</column>
+            <column name="price">595.00</column>
+        </table>
+        <table name="part">
+            <column name="partnum">KV29</column>
+            <column name="description">Treadmill</column>
+            <column name="onhand">9</column>
+            <column name="class">SG</column>
+            <column name="warehouse">2</column>
+            <column name="price">1390.00</column>
+        </table>
+        <!-- Table rep -->
+        <table name="rep">
+            <column name="repnum">20</column>
+            <column name="lastname">Kaiser</column>
+            <column name="firstname">Valerie</column>
+            <column name="street">624 Randall</column>
+            <column name="city">Grove</column>
+            <column name="state">FL</column>
+            <column name="zip">33321</column>
+            <column name="commission">20542.50</column>
+            <column name="rate">0.05</column>
+        </table>
+        <table name="rep">
+            <column name="repnum">35</column>
+            <column name="lastname">Hull</column>
+            <column name="firstname">Richard</column>
+            <column name="street">532 Jackson</column>
+            <column name="city">Sheldon</column>
+            <column name="state">FL</column>
+            <column name="zip">33553</column>
+            <column name="commission">39216.00</column>
+            <column name="rate">0.07</column>
+        </table>
+        <table name="rep">
+            <column name="repnum">65</column>
+            <column name="lastname">Perez</column>
+            <column name="firstname">Juan</column>
+            <column name="street">1626 Taylor</column>
+            <column name="city">Fillmore</column>
+            <column name="state">FL</column>
+            <column name="zip">33336</column>
+            <column name="commission">23487.00</column>
+            <column name="rate">0.05</column>
+        </table>
+    </database>
+</pma_xml_export>

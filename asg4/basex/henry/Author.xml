@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<dataroot>
+  <Author>
+    <AuthorNum>1</AuthorNum>
+    <AuthorLast>Morrison    </AuthorLast>
+    <AuthorFirst>Toni      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>2</AuthorNum>
+    <AuthorLast>Solotaroff  </AuthorLast>
+    <AuthorFirst>Paul      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>3</AuthorNum>
+    <AuthorLast>Vintage     </AuthorLast>
+    <AuthorFirst>Vernor    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>4</AuthorNum>
+    <AuthorLast>Francis     </AuthorLast>
+    <AuthorFirst>Dick      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>5</AuthorNum>
+    <AuthorLast>Straub      </AuthorLast>
+    <AuthorFirst>Peter     </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>6</AuthorNum>
+    <AuthorLast>King        </AuthorLast>
+    <AuthorFirst>Stephen   </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>7</AuthorNum>
+    <AuthorLast>Pratt       </AuthorLast>
+    <AuthorFirst>Philip    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>8</AuthorNum>
+    <AuthorLast>Chase       </AuthorLast>
+    <AuthorFirst>Truddi    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>9</AuthorNum>
+    <AuthorLast>Collins     </AuthorLast>
+    <AuthorFirst>Bradley   </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>10</AuthorNum>
+    <AuthorLast>Heller      </AuthorLast>
+    <AuthorFirst>Joseph    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>11</AuthorNum>
+    <AuthorLast>Wills       </AuthorLast>
+    <AuthorFirst>Gary      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>12</AuthorNum>
+    <AuthorLast>Hofstadter  </AuthorLast>
+    <AuthorFirst>Douglas R.</AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>13</AuthorNum>
+    <AuthorLast>Lee         </AuthorLast>
+    <AuthorFirst>Harper    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>14</AuthorNum>
+    <AuthorLast>Ambrose     </AuthorLast>
+    <AuthorFirst>Stephen E.</AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>15</AuthorNum>
+    <AuthorLast>Rowling     </AuthorLast>
+    <AuthorFirst>J.K.      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>16</AuthorNum>
+    <AuthorLast>Salinger    </AuthorLast>
+    <AuthorFirst>J.D.      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>17</AuthorNum>
+    <AuthorLast>Heaney      </AuthorLast>
+    <AuthorFirst>Seamus    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>18</AuthorNum>
+    <AuthorLast>Camus       </AuthorLast>
+    <AuthorFirst>Albert    </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>19</AuthorNum>
+    <AuthorLast>Collins, Jr.</AuthorLast>
+    <AuthorFirst>Bradley   </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>20</AuthorNum>
+    <AuthorLast>Steinbeck   </AuthorLast>
+    <AuthorFirst>John      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>21</AuthorNum>
+    <AuthorLast>Castelman   </AuthorLast>
+    <AuthorFirst>Riva      </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>22</AuthorNum>
+    <AuthorLast>Owen        </AuthorLast>
+    <AuthorFirst>Barbara   </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>23</AuthorNum>
+    <AuthorLast>O'Rourke    </AuthorLast>
+    <AuthorFirst>Randy     </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>24</AuthorNum>
+    <AuthorLast>Kidder      </AuthorLast>
+    <AuthorFirst>Tracy     </AuthorFirst>
+  </Author>
+  <Author>
+    <AuthorNum>25</AuthorNum>
+    <AuthorLast>Schleining  </AuthorLast>
+    <AuthorFirst>Lon       </AuthorFirst>
+  </Author>
+</dataroot>

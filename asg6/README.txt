@@ -1,17 +1,26 @@
- ========================================================
+The purpose of this assignment is to familiarize with the map-reduce paradigm.
 
- Name: Ernesto Diaz
+Consider a shopping database relational schema with one table as:
+    Purchase( City, ProductCategory, Price, PaymentMode )
 
- Panther-ID: x x x - 0534
+A custom data set (as a CSV file) has been created for you. You need to write and test three python scripts
+to process this sales data information (500,000 records) to answer three questions.
 
- Course: COP 4722
+Your custom data set and questions specific to this data set can be accessed from
+https://users.cs.fiu.edu/~prabakar/database/4722sp18/yourUsername-yourPantherid (all in lowercase)
 
- Assignment#: 6
+Ref: https://pythonhosted.org/mrjob/
+     https://media.readthedocs.org/pdf/mrjob/latest/mrjob.pdf
+     https://cloud.google.com/getting-started/
+     https://cloud.google.com/docs/
+     https://cloud.google.com/docs/tutorials
+     
+Submission:
+Part1: Follow through the GCP VM installation video and complete the installation of a VM instance on your GCP account.
+At the end, run the following commands:
+        docker -v
+        docker-compose -v
+        docker ps -a
+and take a screenshot of your console (after each of the above commands) using a software like Snipping Tool.
 
- Due: Wed, Apr 18, 2018
-
- I hereby certify that this work is my own and none of
- it is the work of any other person.
-
- Signature: ______________________
- =========================================================
+Part2: Run each of your scripts for the three questions and take a screenshot of the console with the output results.

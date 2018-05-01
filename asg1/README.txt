@@ -3,9 +3,10 @@ The purpose of this assignment is to familiarize with query optimization.
 Consider the following four queries specified on Company database (tables and schema):
 
 Q1: Retrieve the name and address of all employees who work for the 'Administration' department
-    SELECT FName, LName, Address
-    FROM Employee, department
-    WHERE DName = 'Administration' and DNumber = DNO ;
+
+        SELECT FName, LName, Address
+        FROM Employee, department
+        WHERE DName = 'Administration' and DNumber = DNO ;
 
 Q2: For each employee, retrieve the employee's first and last name and the first and last name of
     his/her immediate supervisor.
@@ -37,5 +38,4 @@ Draw the initial query tree for each of these queries, then show how the query t
 optimized (one rule at a time) by the algorithm outlined in chapter 19 and write the SQL
 query for the final optimized query tree.
 
-Part2: Extend the sort-merge join algorithm shown in the modified Figure to implement the left outer join
-operation.
+Part2: Extend the sort-merge join algorithm shown in the modified Figure to implement the left outer join operation.
